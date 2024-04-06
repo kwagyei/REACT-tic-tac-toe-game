@@ -2,8 +2,8 @@ import React, { useState } from 'react'
 
 function Login() {
 
-    const [username,setUsername] = useState(null);
-    const [password,setPassword] = useState(null);
+    const [userName,setUserName] = useState("");
+    const [password,setPassword] = useState("");
 
     const login = () => {
 
@@ -17,13 +17,13 @@ function Login() {
         <input 
         type="text"
         placeholder='User Name'
-        onChange={(event) => {setUsername({...username, userName: event.target.value})}}
+        onChange={(event) => {setUserName(event.target.value)}}
         />
 
         <input 
         type="password"
         placeholder='Password Name'
-        onChange={(event) => {setPassword({...password, password: event.target.value})}}
+        onChange={(event) => {setPassword(event.target.value)}}
         />
 
         <button onClick={login}>Login</button>
